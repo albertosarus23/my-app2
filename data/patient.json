@@ -1,0 +1,16 @@
+{
+    "patients": [
+      {
+        "name": "孙笑川",
+        "room": "6324",
+        "doctor": "piglet lilaoba",
+        "id": 0
+      },
+      {
+        "name": "李老八",
+        "room": "6426",
+        "doctor": "🇺🇸李法王",
+        "id": 1
+      }
+    ]
+  }

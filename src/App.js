@@ -4,6 +4,10 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 import Create from './Create';
+import Storage from "./Storage";
+import PatientList from "./PatientList";
+import PatientDetails from "./PatientDetails";
+import PatientQueue from "./PatientQueue";
 
 function App() {
   return (
@@ -15,6 +19,15 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route path="/storage">
+              <Storage />
+            </Route>
+            <Route path="/queue">
+              <PatientQueue />
+            </Route>
+            <Route path ="/bloglist">
+              <Storage />
+            </Route>
             <Route path ="/create">
               <Create />
             </Route>
@@ -23,6 +36,12 @@ function App() {
             </Route>
             <Route path="*">
               <NotFound />
+            </Route>
+            <Route path="/patientlist">
+              <PatientList />
+            </Route>
+            <Route path="/patient/:id">
+              <PatientDetails id = {1} />
             </Route>
           </Switch>
         </div>

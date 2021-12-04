@@ -2,37 +2,34 @@ import { useHistory, useParams} from "react-router-dom";
 import useFetch from "./usefetch";
 import {Link} from "react-router-dom";
 
-const BlogDetails =() =>{
-    const {id} = useParams();
-    const{data: blog,error,isPending} = useFetch('http://localhost:8000/blogs/' + id);
+const PatientDetails =({id}) =>{
+    const{data: patient,error,isPending} = useFetch('http://localhost:8001/patients/' + id);
     const history = useHistory();
 
     const handleClick = () =>{
-        fetch('http://localhost:8000/blogs/' +blog.id, {
+        fetch('http://localhost:8001/patients/' +patient.id, {
             method:'DELETE'
         }).then(() =>{
-            history.push('/bloglist');
+            history.push('/patientlist');
         })
     }
 
-    const handleClick1 = () =>{
-        <link rel="stylesheet" href='/storage'/>
-    }
 
     return (
-        <div className="blog-details">
+        <div className="patient-details">
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {blog &&(
+            {patient &&(
                 <article>
-                    <h2>{blog.title}</h2>
-                    <p>Prescribed by {blog.author}</p>
-                    <div>{blog.body}</div>
+                    <p>{patient}</p>
+                    <h2>{patient.name}</h2>
+                    <p>Prescribed by {patient.doctor}</p>
+                    <div>{patient.room}</div>
                     <div className="Delete_Button">
                         <button onClick={handleClick}>delete</button>
                     </div>
                     <div className ="Go_Back">
-                        <Link to='/bloglist'>
+                        <Link to='/patientlist'>
                             <button>back</button>
                             </Link>
                     </div>
@@ -43,4 +40,4 @@ const BlogDetails =() =>{
     );
 }
 
-export default BlogDetails;
+export default PatientDetails;
