@@ -20,7 +20,8 @@ const useFetch = (url) => {
         })
         .then(data => {
             setIsPending(false);
-            setData(data);
+            let test = Array.from(data["drug"]);
+            setData(test);
             setError(null);
         })
         .catch(err =>{
@@ -32,7 +33,6 @@ const useFetch = (url) => {
             }
             setIsPending(false);
             setError(err.message);
-            console.log("err.message")
         }
             )
         return () => abortCont.abort();

@@ -4,13 +4,13 @@ import useFetch from "./usefetch";
 import { Link } from "react-router-dom";
 
 const Storage = () => {
-  const {error, isPending, data:blogs} = useFetch('http://localhost:8000/blogs');
+  const {error, isPending, data:drug} = useFetch('http://localhost:8080/Drug/getAllDrugs');
 
   return (
     <div className="storage">
       { error && <div>{ error }</div> }
-      { isPending && <div>Loading...</div> }
-      { blogs && <BlogList blogs={blogs} /> }
+      { isPending && <div>LoadingStorage...</div> }
+      { drug && <BlogList drug={drug} /> }
       <div className="add_drug">
         <Link to="/create">Add drug</Link>
       </div>

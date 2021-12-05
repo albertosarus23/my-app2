@@ -4,10 +4,10 @@ import useFetch from "./usefetch";
 import { Link } from "react-router-dom";
 
 const PatientQueue = () => {
-  const {error, isPending, data:patients} = useFetch('http://localhost:8001/patients');
+  const {error, isPending, data:patients} = useFetch('http://localhost:8080/Patient/getAllPatients');
 
   return (
-    <div className="queue">
+    <div className="Patients">
       { error && <div>{ error }</div> }
       { isPending && <div>Loading...</div> }
       { patients && <PatientList patients={patients} /> }
