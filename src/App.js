@@ -10,6 +10,7 @@ import PatientDetails from "./PatientDetails";
 import PatientQueue from "./PatientQueue";
 
 function App() {
+
   return (
     <Router>
       <div className="App">

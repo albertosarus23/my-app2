@@ -1,0 +1,17 @@
+{
+  "patients":[
+    {
+      "patient_id":1,
+      "patient_name":"小明",
+      "patient_age":10,
+      "patient_iden_id":"114514",
+      "last_hospitalizationTime":"2020.1",
+      "patient_sex":"男",
+      "disease":"瘸腿",
+      "patient_account_id":"小明",
+      "patient_account_password":"88888888",
+      "roomQueue":null,
+      "roomNumRemain":0
+    }
+  ]
+}
