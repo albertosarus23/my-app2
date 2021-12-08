@@ -26,11 +26,16 @@ function LoginForm() {
                 if (response.data.code === 1) {
                     alert(response.data.data.dispaly_name);
                 } else {
-                    alert(response.data.msg);
+                    alert(response.status);
                 }
             })
             .catch(function (error) {
                 console.log(error.message);
+                if(error.response){
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                }
             });
     };
 

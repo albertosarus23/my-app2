@@ -20,7 +20,7 @@ const useFetch = (url) => {
         })
         .then(data => {
             setIsPending(false);
-            let test = Array.from(data["drug"]);
+            let test = Array.from(data["list"]);
             setData(test);
             setError(null);
         })
