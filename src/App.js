@@ -8,6 +8,7 @@ import Storage from "./Storage";
 import PatientList from "./PatientList";
 import PatientDetails from "./PatientDetails";
 import PatientQueue from "./PatientQueue";
+import LoginForm from "./LoginForm";
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
         <Navbar />
         <div className ='content'>
           <Switch>
+            <Route exact path="/login">
+              <LoginForm />
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>
@@ -40,6 +44,9 @@ function App() {
             </Route>
             <Route path="/patientlist">
               <PatientList />
+            </Route>
+            <Route path="/">
+              <LoginForm />
             </Route>
             <Route path="/patient/:id">
               <PatientDetails id = {1} />

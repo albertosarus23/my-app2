@@ -44,7 +44,7 @@ function LoginForm() {
     };
 
     return (
-        <div>
+        <div className = "LoginForm">
             <Form
                 {...layout}
                 name="basic"
@@ -78,7 +78,15 @@ function LoginForm() {
                     </Button>
                 </Form.Item>
             </Form>
+            <div className = "Login_to_home">
+                <Link to="/"style={{ 
+                    color: 'white', 
+                    backgroundColor: '#f1356d',
+                    borderRadius: '8px' 
+                }}>Home</Link>
+            </div>
         </div>
+        
     );
 }
 export default LoginForm;

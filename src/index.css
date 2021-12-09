@@ -180,3 +180,20 @@
   text-decoration: none;
   border-width: 15px;
 }
+
+.LoginForm{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.LoginForm Form.Item {
+  background: #fff;
+  color:  #333;
+  border: 15;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border-color: #f1356d;
+  text-decoration: none;
+  border-width: 15px;
+}
