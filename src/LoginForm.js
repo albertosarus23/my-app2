@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import 'antd/dist/antd.css'
 import axios from 'axios'
+import {Link} from "react-router-dom";
 
 function LoginForm() {
 
@@ -73,18 +74,20 @@ function LoginForm() {
                 </Form.Item>
 
                 <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
+                    <Link to="/">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Link>
                 </Form.Item>
             </Form>
-            <div className = "Login_to_home">
+            {/* <div className = "Login_to_home">
                 <Link to="/"style={{ 
                     color: 'white', 
                     backgroundColor: '#f1356d',
                     borderRadius: '8px' 
                 }}>Home</Link>
-            </div>
+            </div> */}
         </div>
         
     );
