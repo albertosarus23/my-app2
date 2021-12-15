@@ -26,7 +26,14 @@ const Home = () => {
             <p>Go check the current queue</p>
           </Link>
         </div>
+        <div className = "Patient_Queue">
+          <Link to="/queue">
+            <h1> Patient Management</h1>
+            <p>Go manage the patient queue</p>
+          </Link>
+        </div>
       </div>
+
     </div>
   );
 }
