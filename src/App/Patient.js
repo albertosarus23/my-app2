@@ -1,16 +1,17 @@
-import Navbar from './Navbar';
-import Home from './Home';
+import Navbar from '../Home/Navbar';
+import Home from '../Home/Home';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import BlogDetails from "./BlogDetails";
-import NotFound from "./NotFound";
-import Create from './Create';
-import Storage from "./Storage";
-import PatientList from "./PatientList";
-import PatientDetails from "./PatientDetails";
-import PatientQueue from "./PatientQueue";
-import LoginForm from "./LoginForm";
+import BlogDetails from "../Blogs/BlogDetails";
+import NotFound from "../NotFound";
+import Create from '../Blogs/Create';
+import Storage from "../Storage/Storage";
+import PatientList from "../Patient/PatientList";
+import PatientDetails from "../Patient/PatientDetails";
+import PatientQueue from "../Patient/PatientQueue";
+import LoginForm from "../Login/LoginForm";
+import PatientHome from "../Home/PatientHome";
 
-function App() {
+function Patient() {
 
   return (
     <Router>
@@ -18,14 +19,8 @@ function App() {
         <Navbar />
         <div className ='content'>
           <Switch>
-            <Route exact path="/login">
-              <LoginForm />
-            </Route>
             <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/storage">
-              <Storage />
+              <PatientHome />
             </Route>
             <Route path="/queue">
               <PatientQueue />
@@ -45,9 +40,6 @@ function App() {
             <Route path="/patientlist">
               <PatientList />
             </Route>
-            <Route path="/">
-              <LoginForm />
-            </Route>
             <Route path="/patient/:id">
               <PatientDetails id = {1} />
             </Route>
@@ -58,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default Patient;

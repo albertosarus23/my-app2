@@ -1,8 +1,8 @@
 import ImageGallery from 'react-image-gallery';
-import picture01 from './pictures/t01.jpg';
-import picture02 from "./pictures/t02.jpg";
-import picture03 from "./pictures/t03.jpg";
-import picture04 from "./pictures/t04.jpg";
+import picture01 from '../Pictures/t01.jpg';
+import picture02 from "../Pictures/t02.jpg";
+import picture03 from "../Pictures/t03.jpg";
+import picture04 from "../Pictures/t04.jpg";
 
 
 const Pictures = () => {
@@ -28,7 +28,7 @@ const Pictures = () => {
 
     return ( 
         <div className="pictures gallery" showPlayButton = {false} showFullscreenButton = {false}>
-            <ImageGallery items={galleryitems} />;
+            <ImageGallery items={galleryitems} />
         </div>
      );
 }

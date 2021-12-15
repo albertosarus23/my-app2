@@ -1,6 +1,6 @@
 //import { useEffect, useState } from "react";
-import BlogList from "./BlogList";
-import useFetch from "./usefetch";
+import BlogList from "../Blogs/BlogList";
+import useFetch from "../usefetch";
 import { Link } from "react-router-dom";
 
 const Storage = () => {

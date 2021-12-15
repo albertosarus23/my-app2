@@ -1,5 +1,5 @@
 import { useHistory, useParams} from "react-router-dom";
-import useFetch from "./usefetch";
+import useFetch from "../usefetch";
 import {Link} from "react-router-dom";
 
 const PatientDetails =({id}) =>{

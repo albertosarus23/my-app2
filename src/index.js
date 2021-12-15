@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import LoginForm from "./LoginForm";
+import Doctor from './App/Doctor.js';
+import Login from "./Login/Login";
+import Patient from './App/Patient.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );

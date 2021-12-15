@@ -1,6 +1,6 @@
 //import { useEffect, useState } from "react";
 import PatientList from "./PatientList";
-import useFetch from "./usefetch";
+import useFetch from "../usefetch";
 import { Link } from "react-router-dom";
 
 const PatientQueue = () => {

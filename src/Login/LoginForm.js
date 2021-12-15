@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import 'antd/dist/antd.css'
 import axios from 'axios'
+import Pateint from "../App/Patient";
 
 function LoginForm() {
 
@@ -28,6 +29,7 @@ function LoginForm() {
                 } else {
                     alert(response.status);
                 }
+                console.log(response.data);
             })
             .catch(function (error) {
                 console.log(error.message);
@@ -40,7 +42,7 @@ function LoginForm() {
     };
 
     const onFinishFailed = errorInfo => {
-        console.log('Failed:', errorInfo);
+        console.log('Failed: login form', errorInfo);
     };
 
     return (
